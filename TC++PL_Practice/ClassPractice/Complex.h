@@ -1,5 +1,7 @@
-
+#include <iostream>
 namespace comp{
+
+using std::ostream;
 
 class Complex{
 
@@ -18,6 +20,8 @@ public:
     Complex add(const Complex& x);
     Complex minus(Complex x);
     Complex times(Complex x);
+    
+    Complex& operator+=(Complex x);
 
 };
 
@@ -26,5 +30,6 @@ bool operator!=(const Complex& a,const Complex& b);
 Complex operator+(Complex a,Complex b);
 Complex operator-(Complex a,Complex b);
 Complex operator*(Complex a,Complex b);
+ostream& operator<<(ostream& s, Complex x);
 
 };

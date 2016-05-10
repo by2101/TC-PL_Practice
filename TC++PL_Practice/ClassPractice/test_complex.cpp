@@ -11,8 +11,9 @@ int main()
     Complex a = x.add(y);
     Complex b = x.minus(y);
     Complex c = x.times(y);
+    x += 1;
 
-    cout << z.real()<<"+"<<z.imaginary()<<"i"<<endl;
+    cout <<x<<endl;
 
     return 0;
 }

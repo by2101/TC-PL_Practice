@@ -35,6 +35,15 @@ Complex Complex::times(Complex x)
                     re * x.imaginary() + im * x.real());
 }
 
+Complex& Complex::operator+=(Complex x)
+{
+    re += x.real();
+    im += x.imaginary();
+    return *this;
+}
+
+
+
 bool operator==(const Complex& a, const Complex& b)
 {
     return a.real() == b.real() && a.imaginary() == b.imaginary();
@@ -56,7 +65,10 @@ Complex operator*(Complex& a,Complex b)
 {
     return a.times(b);
 }
-
+ostream& operator<<(ostream& s, Complex x)
+{
+    return s<<x.real()<<"+"<<x.imaginary()<<"i"; 
+}
 }
 
 
